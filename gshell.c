@@ -835,29 +835,29 @@ static uint8_t gshell_cmd_help(uint8_t argc, char *argv[])
 		}
 
 		// Some boundary checks in order to print long descriptions nicely:
-		if (2+longestDescription+longestCommand >= G_RX_BUFSIZE)
-		{
+		//if (2+longestDescription+longestCommand >= G_RX_BUFSIZE)
+		//{
 			gshell_putString("\r"G_TEXTBOLD);
 			gshell_putString_flash(command->cmdName);
-			gshell_putString(G_TEXTNORMAL":"G_CRLF"     ");
+			gshell_putString(G_TEXTNORMAL":"G_CRLF"  ");
 			gshell_putString_flash(command->desc);
 			gshell_putString(G_CRLF);
-		}
-		else
-		{
-			// Command name + description not too large?
-			// Print the spaces, then the description, then use
-			// CR to return back to the start to print the command name
-			// Go to the next line (LF) and repeat as long a there are commands
-			for (uint8_t j = 0; j < (longestCommand+2); j++)
-			{
-				gshell_putChar(' ');
-			}
-			gshell_putString_flash(command->desc);
-			gshell_putString("\r"G_TEXTBOLD);
-			gshell_putString_flash(command->cmdName);
-			gshell_putString(G_TEXTNORMAL":"G_CRLF);
-		}
+		//}
+		//else
+		//{
+		//	// Command name + description not too large?
+		//	// Print the spaces, then the description, then use
+		//	// CR to return back to the start to print the command name
+		//	// Go to the next line (LF) and repeat as long a there are commands
+		//	for (uint8_t j = 0; j < (longestCommand+2); j++)
+		//	{
+		//		gshell_putChar(' ');
+		//	}
+		//	gshell_putString_flash(command->desc);
+		//	gshell_putString("\r"G_TEXTBOLD);
+		//	gshell_putString_flash(command->cmdName);
+		//	gshell_putString(G_TEXTNORMAL":"G_CRLF);
+		//}
 	}
 #ifdef ENABLE_STATIC_COMMANDS
 	// Same as with the dynamic commands above!

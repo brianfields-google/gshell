@@ -105,24 +105,23 @@
 #endif
 
 /* ANSI ESCAPE SEQUENCES TEXT FORMATTING */
-#define G_ESCAPE		"\x1b["
-#define G_TEXTNORMAL	G_ESCAPE"0m"
-#define G_TEXTBOLD		G_ESCAPE"1m"
-#define G_TEXTUNDERLINE	G_ESCAPE"4m"
-#define G_TEXTBLINK		G_ESCAPE"5m"
-#define G_TEXTNEGATIVE	G_ESCAPE"7m"
-#define G_CLEARLINE		G_ESCAPE"2K"
+#define G_ESCAPE		""//"\x1b["
+#define G_TEXTNORMAL	""//G_ESCAPE"0m"
+#define G_TEXTBOLD		""//G_ESCAPE"1m"
+#define G_TEXTUNDERLINE	""//G_ESCAPE"4m"
+#define G_TEXTBLINK		""//G_ESCAPE"5m"
+#define G_TEXTNEGATIVE	""//G_ESCAPE"7m"
+#define G_CLEARLINE		""//G_ESCAPE"2K"
 /* ANSI ESCAPE SEQUENCES TEXT COLOR */
-#define G_COLORRESET	G_ESCAPE"39m"
-#define G_COLORRED		G_ESCAPE"31m"
-#define G_COLORGREEN	G_ESCAPE"32m"
-#define G_COLORYELLOW	G_ESCAPE"33m"
-#define G_COLORBLUE		G_ESCAPE"34m"
-#define G_COLORMAGENTA	G_ESCAPE"35m"
-#define G_COLORCYAN		G_ESCAPE"36m"
-#define G_COLORWHITE	G_ESCAPE"37m"
-#define G_COLORCUSTOM(r,g,b) \
-		G_ESCAPE"38m;2;"r";"g";"b
+#define G_COLORRESET	""//G_ESCAPE"39m"
+#define G_COLORRED		""//G_ESCAPE"31m"
+#define G_COLORGREEN	""//G_ESCAPE"32m"
+#define G_COLORYELLOW	""//G_ESCAPE"33m"
+#define G_COLORBLUE		""//G_ESCAPE"34m"
+#define G_COLORMAGENTA	""//G_ESCAPE"35m"
+#define G_COLORCYAN		""//G_ESCAPE"36m"
+#define G_COLORWHITE	""//G_ESCAPE"37m"
+#define G_COLORCUSTOM(r,g,b) ""//G_ESCAPE"38m;2;"r";"g";"b
 
 
 /* General Terminal Sequences */
