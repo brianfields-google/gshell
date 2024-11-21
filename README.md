@@ -1,8 +1,9 @@
 # GShell - little shell / logger for embedded systems
+
+Modified from original source ([gfcwfzkm](https://github.com/gfcwfzkm)) for use on STM32H7. 
+
 ## Overview
 Basic uart shell for embedded systems. While it has been initially developed for the AVR microcontrollers, it can be used with pretty much any controller or on computers as long as you provide the nessesary `printChar` function. 
-
-![Image from the main.c demo file](images/mainImage.png)
 
 ## Features
  - Should run on most microcontrollers with no changes
