@@ -822,6 +822,7 @@ static uint8_t gshell_cmd_help(uint8_t argc, char *argv[])
 	// Print the command, followed by some spacing, and finally the description
 	// The amount of "spaces" between the command name and description is
 	// based on the longest command name.
+	gshell_putString(G_CRLF);
 	for (u8_cnt = 0; u8_cnt < sInternals.chain_len; u8_cnt++)
 	{
 		// If u8Cnt is zero, start with the help command, otherwise with the dynamic command chain
@@ -838,6 +839,7 @@ static uint8_t gshell_cmd_help(uint8_t argc, char *argv[])
 		if (2+longestDescription+longestCommand >= G_RX_BUFSIZE)
 		{
 			gshell_putString("\r"G_TEXTBOLD);
+			gshell_putString(" ");
 			gshell_putString_flash(command->cmdName);
 			gshell_putString(G_TEXTNORMAL":"G_CRLF"     ");
 			gshell_putString_flash(command->desc);
@@ -849,12 +851,13 @@ static uint8_t gshell_cmd_help(uint8_t argc, char *argv[])
 			// Print the spaces, then the description, then use
 			// CR to return back to the start to print the command name
 			// Go to the next line (LF) and repeat as long a there are commands
-			for (uint8_t j = 0; j < (longestCommand+2); j++)
+			for (uint8_t j = 0; j < (longestCommand+3); j++)
 			{
 				gshell_putChar(' ');
 			}
 			gshell_putString_flash(command->desc);
 			gshell_putString("\r"G_TEXTBOLD);
+			gshell_putString(" ");
 			gshell_putString_flash(command->cmdName);
 			gshell_putString(G_TEXTNORMAL":"G_CRLF);
 		}
